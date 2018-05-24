@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Configure",
+    "\\models",
+    "\\routes",
+    "\\Services"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }

@@ -25,7 +25,7 @@ passport.use(new GoogleStrategy({
         .then(existingUser => {
             if (existingUser) {
                 done(null, existingUser);
-
+             
             } else {
                 new User({ googleId: profile.id })
                     .save()//save() from local mongoose store to mongoDatabase

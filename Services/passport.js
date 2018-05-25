@@ -23,6 +23,13 @@ passport.use(new GoogleStrategy({
 }, (accessToken, refreshToken, profile, done) => {
     User.findOne({ googleId: profile.id })
         .then(existingUser => {
+            if (process.env.NODE_ENV === 'production') {
+                //we are in production - return the prod set of keys
+                console.log('productioning');
+            }
+            else {
+                console.log('developing');
+            }
             if (existingUser) {
                 done(null, existingUser);
              
@@ -30,7 +37,8 @@ passport.use(new GoogleStrategy({
                 console.log(profile.id +' profile');
                 new User({ googleId: profile.id })
                     .save()//save() from local mongoose store to mongoDatabase
-                    .then(user=>done(null,user));//this user same one above User but since User saved, it may have some changes
+                    .then(user => done(null, user));//this user same one above User but since User saved, it may have some changes
+                
             }
 
         })

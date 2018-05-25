@@ -18,7 +18,7 @@ passport.deserializeUser((id, done) => {
 passport.use(new GoogleStrategy({
     clientID: keys.googleCLientID,
     clientSecret: keys.googleClientSecrect,
-    callbackURL: 'https://frozen-tor-51520.herokuapp.com/auth/google/callback',  //when google give the code to call
+    callbackURL: '/auth/google/mycallback',//when google give the code to call
     proxy: true
 }, (accessToken, refreshToken, profile, done) => {
     User.findOne({ googleId: profile.id })
@@ -27,6 +27,7 @@ passport.use(new GoogleStrategy({
                 done(null, existingUser);
              
             } else {
+                console.log(profile.id +' profile');
                 new User({ googleId: profile.id })
                     .save()//save() from local mongoose store to mongoDatabase
                     .then(user=>done(null,user));//this user same one above User but since User saved, it may have some changes

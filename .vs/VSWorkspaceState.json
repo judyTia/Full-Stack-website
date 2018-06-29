@@ -1,11 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\client",
+    "\\client\\src",
+    "\\client\\src\\actions",
+    "\\client\\src\\components",
+    "\\client\\src\\reducers",
     "\\Configure",
     "\\models",
     "\\routes",
     "\\Services"
   ],
-  "SelectedNode": "\\Configure\\keys.js",
+  "SelectedNode": "\\index.js",
   "PreviewInSolutionExplorer": false
 }

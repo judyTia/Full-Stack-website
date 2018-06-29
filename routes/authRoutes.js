@@ -19,5 +19,3 @@ module.exports = (app) => {
         res.send(req.user);//passport attached the user object to req
     });
 };
-//332884332510 - 5jf87sveojt9hsvr00me3b78qntcvftc.apps.googleusercontent.com
-//mjIbmm8sNXSgc2ZZnUkerU12

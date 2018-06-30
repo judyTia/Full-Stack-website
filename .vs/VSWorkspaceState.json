@@ -4,13 +4,12 @@
     "\\client",
     "\\client\\src",
     "\\client\\src\\actions",
-    "\\client\\src\\components",
     "\\client\\src\\reducers",
     "\\Configure",
     "\\models",
     "\\routes",
     "\\Services"
   ],
-  "SelectedNode": "\\index.js",
+  "SelectedNode": "\\client\\package.json",
   "PreviewInSolutionExplorer": false
 }

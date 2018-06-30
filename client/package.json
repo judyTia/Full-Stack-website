@@ -5,9 +5,11 @@
   "proxy": {
     "/auth/mygoogle": {
       "target": "http://localhost:7000"
+
     },
     "/api/*": {
-      "target":  "http://localhost:7000"
+      "target": "http://localhost:7000",
+      "secure": false
     }
   },
   "dependencies": {

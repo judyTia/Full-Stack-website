@@ -9,7 +9,8 @@ module.exports = (app) => {
     })
     );
 
-    app.get('/auth/google/mycallback', passport.authenticate('google'));
+    app.get('/auth/google/mycallback', passport.authenticate('google'),
+);
     app.get('/api/logout', (req, res) => {
         req.logout();//passport attached the logout method to req
         res.send(req.user);//req.user is already detroied by browers

@@ -4,12 +4,12 @@
     "\\client",
     "\\client\\src",
     "\\client\\src\\actions",
+    "\\client\\src\\components",
     "\\client\\src\\reducers",
     "\\Configure",
     "\\models",
-    "\\routes",
-    "\\Services"
+    "\\routes"
   ],
-  "SelectedNode": "\\client\\package.json",
+  "SelectedNode": "\\routes\\authRoutes.js",
   "PreviewInSolutionExplorer": false
 }
